@@ -1,9 +1,0 @@
-module window {
-
-    interface [OmitConstructor] LJStandby { 
-        readonly attribute DOMString setStandby; 
-        readonly attribute DOMString getStandby;  
-    };
-
-}
-
