@@ -1,0 +1,9 @@
+module window {
+
+    interface LJStandby { 
+        DOMString setStandby(); 
+        DOMString setStandbyWithArgu(in DOMString value); 
+    };
+
+}
+
