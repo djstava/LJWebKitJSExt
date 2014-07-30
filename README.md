@@ -8,5 +8,5 @@ WebKit Javascript Extentsion for LJ
   
 2 Build thd WebKit
 
-3 Test page
-	$(PWD)/pages
+3 Test page	
+  $(PWD)/pages
