@@ -35,6 +35,7 @@ list(APPEND WEBCORE_SRC
     page/WindowFeatures.cpp
     page/XSSAuditor.cpp
     page/LJStandby.cpp
+    page/LJMediaPlayer.cpp
 )
 list(APPEND IDL_SRC
     page/BarInfo.idl
@@ -48,6 +49,7 @@ list(APPEND IDL_SRC
     page/Screen.idl
     page/WebKitPoint.idl
     page/LJStandby.idl
+    page/LJMediaPlayer.idl
 )
 
 if(ENABLE_WORKERS)

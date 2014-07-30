@@ -68,6 +68,7 @@
 #include <wtf/MathExtras.h>
 //djstava
 #include "LJStandby.h"
+#include "LJMediaPlayer.h"
 //end
 
 #if ENABLE(DATABASE)
@@ -163,6 +164,13 @@ LJStandby* DOMWindow::ljstandby() const
     if (!m_ljstandby) 
         m_ljstandby = LJStandby::create(); 
     return m_ljstandby.get(); 
+}
+
+LJMediaPlayer* DOMWindow::ljmediaplayer() const 
+{ 
+    if (!m_ljmediaplayer) 
+        m_ljmediaplayer = LJMediaPlayer::create(); 
+    return m_ljmediaplayer.get(); 
 }
 //end
 
@@ -422,6 +430,7 @@ void DOMWindow::clear()
 
     //djstava
     m_ljstandby = 0;
+    m_ljmediaplayer = 0;
     //end
 
     if (m_selection)

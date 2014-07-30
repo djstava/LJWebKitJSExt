@@ -1,10 +1,18 @@
 <html> 
 <body> 
 <script type="text/javascript"> 
-document.write("<br/> ============= This is from LJWebKit JSExt setStandby no argument:");
+document.write("<br/> ============= This is from LJWebKit JSExt ljstandby.setStandby no argument:");
 document.write(ljstandby.setStandby()); 
-document.write("<br/> ============= This is from LJWebKit JSExt setStandby with argument:");
+document.write("<br/> ============= This is from LJWebKit JSExt ljstandby.setStandby with argument string:");
 document.write(ljstandby.setStandbyWithArgu("helloworld")); 
+document.write("<br/> ============= This is from LJWebKit JSExt ljstandby.setStandby with argument long:");
+document.write(ljstandby.setStandbyWithLong(12345)); 
+
+
+document.write("<br/> ============= This is from LJWebKit JSExt ljmediaplayer.setVolume:");
+document.write(ljmediaplayer.setVolume(32)); 
+document.write("<br/> ============= This is from LJWebKit JSExt ljmediaplayer.setMute:");
+document.write(ljmediaplayer.setMute(1)); 
 </script> 
 </body> 
 </html>

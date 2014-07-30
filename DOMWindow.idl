@@ -106,6 +106,7 @@ module window {
         attribute [Replaceable] long scrollY;
 	//djstava
 	attribute [Replaceable] LJStandby ljstandby;
+	attribute [Replaceable] LJMediaPlayer ljmediaplayer;
 	//end
 
         readonly attribute long pageXOffset;

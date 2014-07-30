@@ -14,6 +14,8 @@ namespace WebCore {
 
         String setStandby(); 
         String setStandbyWithArgu(String value); 
+
+		long setStandbyWithLong(long value);
     private: 
         LJStandby(); 
     };

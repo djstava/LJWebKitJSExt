@@ -66,6 +66,7 @@ namespace WebCore {
     class WebKitPoint;
     //djstava
     class LJStandby;
+	class LJMediaPlayer;
     //end
 
 #if ENABLE(DOM_STORAGE)
@@ -243,9 +244,12 @@ namespace WebCore {
         int setInterval(ScheduledAction*, int timeout);
         void clearInterval(int timeoutId);
 
-	    //djstavav 
+	    //djstava 
         LJStandby* ljstandby() const;
     	LJStandby* optionalLJStandby() const { return m_ljstandby.get(); }
+
+        LJMediaPlayer* ljmediaplayer() const;
+    	LJMediaPlayer* optionalLJMediaPlayer() const { return m_ljmediaplayer.get();}
 		//end
 
         // Events
@@ -364,6 +368,7 @@ namespace WebCore {
 
 	    //djstava
 	    mutable RefPtr<LJStandby> m_ljstandby;
+		mutable RefPtr<LJMediaPlayer> m_ljmediaplayer;
 	    //end
 	    
         virtual void refEventTarget() { ref(); }
