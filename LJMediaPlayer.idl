@@ -1,0 +1,10 @@
+module window {
+
+    interface LJMediaPlayer { 
+        unsigned long setVolume(in unsigned long volume); 
+        long setMute(in long muteFlag);
+    };
+
+}
+
+
