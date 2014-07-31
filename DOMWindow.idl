@@ -107,6 +107,7 @@ module window {
 	//djstava
 	attribute [Replaceable] LJStandby ljstandby;
 	attribute [Replaceable] LJMediaPlayer ljmediaplayer;
+	attribute [Replaceable] LJFrontPanel ljfrontpanel;
 	//end
 
         readonly attribute long pageXOffset;

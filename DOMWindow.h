@@ -67,6 +67,7 @@ namespace WebCore {
     //djstava
     class LJStandby;
 	class LJMediaPlayer;
+	class LJFrontPanel;
     //end
 
 #if ENABLE(DOM_STORAGE)
@@ -250,6 +251,9 @@ namespace WebCore {
 
         LJMediaPlayer* ljmediaplayer() const;
     	LJMediaPlayer* optionalLJMediaPlayer() const { return m_ljmediaplayer.get();}
+
+        LJFrontPanel* ljfrontpanel() const;
+    	LJFrontPanel* optionalLJFrontPanel() const { return m_ljfrontpanel.get();}
 		//end
 
         // Events
@@ -369,6 +373,7 @@ namespace WebCore {
 	    //djstava
 	    mutable RefPtr<LJStandby> m_ljstandby;
 		mutable RefPtr<LJMediaPlayer> m_ljmediaplayer;
+		mutable RefPtr<LJFrontPanel> m_ljfrontpanel;
 	    //end
 	    
         virtual void refEventTarget() { ref(); }

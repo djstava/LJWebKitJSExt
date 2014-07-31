@@ -69,6 +69,7 @@
 //djstava
 #include "LJStandby.h"
 #include "LJMediaPlayer.h"
+#include "LJFrontPanel.h"
 //end
 
 #if ENABLE(DATABASE)
@@ -171,6 +172,13 @@ LJMediaPlayer* DOMWindow::ljmediaplayer() const
     if (!m_ljmediaplayer) 
         m_ljmediaplayer = LJMediaPlayer::create(); 
     return m_ljmediaplayer.get(); 
+}
+
+LJFrontPanel* DOMWindow::ljfrontpanel() const 
+{ 
+    if (!m_ljfrontpanel) 
+        m_ljfrontpanel = LJFrontPanel::create(); 
+    return m_ljfrontpanel.get(); 
 }
 //end
 
@@ -431,6 +439,7 @@ void DOMWindow::clear()
     //djstava
     m_ljstandby = 0;
     m_ljmediaplayer = 0;
+    m_ljfrontpanel = 0;
     //end
 
     if (m_selection)
