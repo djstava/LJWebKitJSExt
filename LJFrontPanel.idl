@@ -1,0 +1,9 @@
+module window {
+
+    interface LJFrontPanel{ 
+	boolean  writeLed(in DOMString buff);
+    };
+
+}
+
+
