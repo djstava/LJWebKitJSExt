@@ -1,10 +1,13 @@
 #ifndef LJStandby_h 
 #define LJStandby_h
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <wtf/PassRefPtr.h> 
 #include <wtf/RefCounted.h>
 
-#include "PlatformString.h"
+#include "dfb_platform.h"
 
 namespace WebCore {
 
@@ -12,12 +15,11 @@ namespace WebCore {
     public: 
         static PassRefPtr<LJStandby> create() { return adoptRef(new LJStandby()); }
 
-        String setStandby(); 
-        String setStandbyWithArgu(String value); 
+        bool setStandby(); 
 
-		long setStandbyWithLong(long value);
     private: 
         LJStandby(); 
+		bool standbyFlag;
     };
 
 } // namespace WebCore

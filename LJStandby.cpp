@@ -6,19 +6,21 @@ LJStandby::LJStandby()
 { 
 }
 
-String LJStandby::setStandbyWithArgu(String value) 
+bool LJStandby::setStandby() 
 { 
-    return value;
-}
-
-String LJStandby::setStandby() 
-{ 
-    return "LJStandby with No argument.\n"; 
-}
-
-long LJStandby::setStandbyWithLong(long value)
-{
-    return value;
+    /*
+    if(standbyFlag){
+        standbyFlag = false;
+        system("/sbin/reboot");
+    }
+    else{
+        standbyFlag = true;
+        DFB_Platform_Uninit();
+    }
+    */
+    printf("====djtsava enter into standby status.\n");
+    DFB_Platform_Uninit();
+    return true;
 }
 
 } // namespace WebCore
