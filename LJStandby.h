@@ -15,7 +15,7 @@ namespace WebCore {
     public: 
         static PassRefPtr<LJStandby> create() { return adoptRef(new LJStandby()); }
 
-        bool setStandby(); 
+        void setStandby(); 
 
     private: 
         LJStandby(); 

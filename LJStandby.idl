@@ -1,7 +1,7 @@
 module window {
 
     interface LJStandby { 
-        boolean setStandby(); 
+        void setStandby(); 
     };
 
 }

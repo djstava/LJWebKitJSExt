@@ -6,7 +6,7 @@ LJStandby::LJStandby()
 { 
 }
 
-bool LJStandby::setStandby() 
+void LJStandby::setStandby() 
 { 
     /*
     if(standbyFlag){
@@ -20,7 +20,6 @@ bool LJStandby::setStandby()
     */
     printf("====djtsava enter into standby status.\n");
     DFB_Platform_Uninit();
-    return true;
 }
 
 } // namespace WebCore
