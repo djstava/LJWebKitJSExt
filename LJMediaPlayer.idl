@@ -1,10 +1,10 @@
 module window {
 
     interface LJMediaPlayer { 
-        void setVolume(in int volume); 
+        void setVolume(in long volume); 
         void setMuted(in boolean b);
         boolean getMuteStatus();
-        int getCurrentVolume();
+        long getCurrentVolume();
     };
 
 }

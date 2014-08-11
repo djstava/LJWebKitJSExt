@@ -18,15 +18,15 @@ namespace WebCore {
     public: 
         static PassRefPtr<LJMediaPlayer> create() { return adoptRef(new LJMediaPlayer()); }
 
-        void setVolume(int volume); 
+        void setVolume(long volume); 
         void setMuted(bool b);
 		bool getMuteStatus();
-		int getCurrentVolume();
+		long getCurrentVolume();
 
     private: 
         LJMediaPlayer(); 
 		void *s_handle;
-		int m_volume;	
+		long m_volume;	
     };
 
 } // namespace WebCore

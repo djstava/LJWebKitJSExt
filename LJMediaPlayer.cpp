@@ -28,14 +28,14 @@ LJMediaPlayer::LJMediaPlayer()
  *
  *======================================================================================
  */
-void LJMediaPlayer::setVolume(int volume) 
+void LJMediaPlayer::setVolume(long volume) 
 { 
     printf("=== djstava setVolume: %d \n",volume);
     m_volume = volume;
     BMedia_AudioSettings pSettings;
     BMedia_GetAudioSettings((BMediaHandle)(LJMediaPlayer::s_handle), &pSettings);
-    pSettings.leftVolume = volume * 100 -3100;
-    pSettings.rightVolume = volume * 100 -3100;
+    pSettings.leftVolume = (int)(volume * 100 -3100);
+    pSettings.rightVolume = (int)(volume * 100 -3100);
     
     BMedia_SetAudioSettings((BMediaHandle)(LJMediaPlayer::s_handle), &pSettings);
 }
@@ -84,9 +84,9 @@ bool LJMediaPlayer::getMuteStatus()
  *
  *======================================================================================
   */
-int LJMediaPlayer::getCurrentVolume()
+long LJMediaPlayer::getCurrentVolume()
 {
-    printf("==== djstava getCurrentVolume:%d \n",m_volume);
+    printf("==== djstava getCurrentVolume:%l \n",m_volume);
     
     if(getMuteStatus())
         return 0;
