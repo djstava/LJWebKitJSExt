@@ -3,11 +3,11 @@ LJWebKitJSExt
 
 WebKit Javascript Extentsion for LJ
 
-1 Put the files into 
+1 Put the source files into 
 
 	$(WebKitSourceCodeRoot)/WebCore/page
   
-2 Build thd WebKit
+2 Build the WebKit
 	
 	take www.webkit.org as a reference
 
